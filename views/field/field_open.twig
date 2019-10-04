@@ -1,0 +1,7 @@
+<div id="{{ field.identifier }}_wrap"
+ class="{{ field.wrap_classes|default('field-wrap') }}"
+>
+
+{% if not ignore_label %}
+    {% include 'label/label.twig' %}
+{% endif %}

@@ -1,0 +1,13 @@
+<div {% if field.identifier %}id="{{ field.identifier }}"{% endif %}
+     class="{{ field.classes|default('') }}"
+>
+{% if field.label %}
+    <h2>{{ field.label }}</h2>
+{% else %}
+    <hr>
+{% endif %}
+
+{% if field.help_text %}
+    {% include 'help_text/help_text.twig' %}
+{% endif %}
+</div>

@@ -1,0 +1,19 @@
+{% include 'field/field_open.twig' with {ignore_label: 1} %}
+
+    {% include 'label/label_open.twig' %}
+
+        <input id="{{ field.identifier }}"
+               class="{{ field.classes|default('') }}"
+               type="{{ field.type }}"
+               name="{{ field.name }}"
+           {% if field.value %}
+               value="{{ field.value }}"
+           {% endif %}
+           {% include 'attributes/attributes.twig' %}
+        >
+
+        {{ field.label }}
+
+    {% include 'label/label_close.twig' %}
+
+{% include 'field/field_close.twig' %}

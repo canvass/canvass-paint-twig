@@ -1,0 +1,9 @@
+<fieldset id="{{ field.identifier }}" class="{{ field.classes|default('') }}">
+    <legend>{{ field.label }}</legend>
+
+    {% include 'help_text/help_text.twig' %}
+
+    {% for child in field.children %}
+        {% include child.general_type ~ '/' ~ child.general_type ~ '.twig' with {field: child} %}
+    {% endfor %}
+</fieldset>

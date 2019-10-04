@@ -1,0 +1,27 @@
+{
+    "name": "canvass/canvass-paint-twig",
+    "description": "A form rendering library using TwigPHP",
+    "type": "library",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Kelly",
+            "email": "puritandesigns@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^1.0|^2.0",
+        "canvass/canvass-paint": "^0.1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "CanvassPaint\\Twig\\": "src/CanvassPaint/Twig/"
+        }
+    }
+}

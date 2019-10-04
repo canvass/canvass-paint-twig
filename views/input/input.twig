@@ -1,0 +1,13 @@
+{% include 'field/field_open.twig' %}
+
+    <input id="{{ field.identifier }}"
+           class="{{ field.classes|default('') }}"
+           type="{{ field.type }}"
+           name="{{ field.name }}"
+       {% if field.value %}
+           value="{{ field.value }}"
+       {% endif %}
+       {% include 'attributes/attributes.twig' %}
+    >
+
+{% include 'field/field_close.twig' %}

@@ -1,0 +1,25 @@
+<h1>{{ name }}</h1>
+
+<form id="{{ identifier }}" class="{{ classes ?: '' }}"
+  method="post" action="{{ action_url }}"
+>
+    {% if meta.csrf_token %}
+        <input type="hidden" name="_token" value="{{ meta.csrf_token }}">
+    {% endif %}
+
+    {% if introduction %}
+        {{ introduction|raw }}
+    {% endif %}
+
+    <p class="intro-required-help" aria-hidden="true">
+        Fields marked with * are required.
+    </p>
+
+    {% for index, field in fields %}
+        {% include field.general_type ~ '/' ~ field.general_type ~ '.twig' %}
+    {% endfor %}
+
+    <button class="{{ button_classes|default('') }}" type="submit">
+        {{ submit_text|default('Submit') }}
+    </button>
+</form>

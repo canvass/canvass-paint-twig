@@ -1,0 +1,11 @@
+{% include 'field/field_open.twig' %}
+
+    <select id="{{ identifier }}" class="{{ classes|default('') }}"
+        name="{{ name }}" {% include 'attributes/attributes.twig' %}
+    >
+    {% for index, child in field.children %}
+        {% include 'option/option.twig' %}
+    {% endfor %}
+    </select>
+
+{% include 'field/field_close.twig' %}

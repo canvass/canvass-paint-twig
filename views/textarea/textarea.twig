@@ -1,0 +1,7 @@
+{% include 'field/field_open.twig' %}
+
+    <textarea id="{{ field.identifier }}" class="{{ field.classes|default('') }}"
+      name="{{ name }}" {% include 'attributes/attributes.twig' %}
+    ></textarea>
+
+{% include 'field/field_close.twig' %}
