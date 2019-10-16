@@ -7,7 +7,5 @@
     <hr>
 {% endif %}
 
-{% if field.help_text %}
-    {% include 'help_text/help_text.twig' %}
-{% endif %}
+    {{ field.help_text|default('')|raw }}
 </div>

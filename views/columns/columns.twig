@@ -1,8 +1,6 @@
 <div {% if field.identifier %}id="{{ field.identifier }}"{% endif %}
      class="{{ field.classes|default('') }}"
 >
-    {{ field.help_text|raw|default('') }}
-
 {% for child in field.children %}
     {% include child.general_type ~ '/' ~ child.general_type ~ '.twig' with {
         field: child

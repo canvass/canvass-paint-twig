@@ -1,5 +1,5 @@
 <div id="{{ field.identifier }}" class="{{ field.classes|default('') }}">
-    {% include 'help_text/help_text.twig' %}
+    {{ field.help_text|default('')|raw }}
 
     {% for child in field.children %}
         {% include child.general_type ~ '/' ~ child.general_type ~ '.twig' with {
