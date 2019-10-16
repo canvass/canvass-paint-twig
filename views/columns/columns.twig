@@ -1,16 +1,11 @@
-<div {% if identifier %}id="{{ identifier }}"{% endif %}
-     class="{{ classes|default('') }}"
+<div {% if field.identifier %}id="{{ field.identifier }}"{% endif %}
+     class="{{ field.classes|default('') }}"
 >
-    {{ help_text|raw|default('') }}
+    {{ field.help_text|raw|default('') }}
 
-{% for child in children %}
-    <div {% if child.identifier %}id="{{ child.identifier }}"{% endif %}
-      class="{{ child.classes|default('') }}"
-    >
-        {% for child in children %}
-            specify child view
-{#            {% include 'child.twig' %}#}
-        {% endfor %}
-    </div>
+{% for child in field.children %}
+    {% include child.general_type ~ '/' ~ child.general_type ~ '.twig' with {
+        field: child
+    } %}
 {% endfor %}
 </div>
