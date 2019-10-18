@@ -1,5 +1,5 @@
 <div {% if field.identifier %}id="{{ field.identifier }}"{% endif %}
-     class="{{ field.classes|default('') }}"
+     class="{{ field.wrap_classes|default('') }}"
 >
 {% if field.label %}
     <h2>{{ field.label }}</h2>

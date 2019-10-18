@@ -1,4 +1,4 @@
-<fieldset id="{{ field.identifier }}" class="{{ field.classes|default('') }}">
+<fieldset id="{{ field.identifier }}" class="{{ field.wrap_classes|default('') }}">
     <legend>{{ field.label }}</legend>
 
     {% include 'help_text/help_text.twig' %}
