@@ -13,8 +13,8 @@
     ],
     "require": {
         "twig/twig": "^1.0|^2.0",
-        "canvass/canvass-core": "^0.2",
-        "canvass/canvass-paint": "^0.2"
+        "canvass/canvass-core": "0.*",
+        "canvass/canvass-paint": "0.*"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
