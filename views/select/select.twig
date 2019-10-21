@@ -1,7 +1,7 @@
 {% include 'field/field_open.twig' %}
 
-    <select id="{{ identifier }}" class="{{ classes|default('') }}"
-        name="{{ name }}" {% include 'attributes/attributes.twig' %}
+    <select id="{{ field.identifier }}" class="{{ field.classes|default('') }}"
+        name="{{ field.name }}" {% include 'attributes/attributes.twig' %}
     >
     {% for index, child in field.children %}
         {% include 'option/option.twig' %}
