@@ -22,7 +22,8 @@ class RenderFunction implements \CanvassPaint\Contract\RenderFunction
         );
     }
 
-    public function getTwigEnvironment(): Environment
+    /** @return \Twig\Environment */
+    public function getTwigEnvironment()
     {
         return $this->twig;
     }
